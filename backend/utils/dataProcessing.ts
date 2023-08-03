@@ -1,1 +1,1 @@
-const extractData = (text: string) => text
+export const extractData = (text: string) => text
