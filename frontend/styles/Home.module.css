@@ -1,3 +1,119 @@
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.mainDiv h1 {
+  font-weight: 300;
+  font-size: 2vw;
+  color: var(--text-blue);
+}
+
+.titleDiv {
+  width: 12%;
+  padding: 1vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+}
+
+.aboutDiv {
+  width: 45%;
+  padding: 2vw;
+  padding-left: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  gap: 1vw;
+}
+
+.aboutDiv h2 {
+  font-size: 5vw;
+  line-height: 0.98;
+  color: var(--text-blue);
+  letter-spacing: -0.015rem;
+  font-weight: 400;
+}
+
+.aboutDiv span {
+  opacity: 0.65;
+  font-size: 2vw;
+  line-height: 1.15;
+  letter-spacing: 0.01rem;
+}
+
+.aboutDiv p {
+  opacity: 0.65;
+  font-size: 1.25vw;
+  line-height: 1.15;
+  letter-spacing: 0.01rem;
+}
+
+.imageDiv {
+  width: 50%;
+  margin: 1vw;
+  border-radius: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.mainButton {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  color: var(--text-blue);
+  padding: 1vw 1.75vw;
+  font-size: 1.75vw;
+  line-height: 1;
+  border-radius: 1.25vw;
+  cursor: pointer;
+}
+
+.fullSizeImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 2.5vw;
+  object-fit: cover;
+  opacity: 1;
+  mix-blend-mode: multiply;
+  opacity: 1;
+}
+
+.greyDiv {
+  background-color: var(--grey);
+  width: 88%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top-left-radius: 3.5vw;
+  border-bottom-left-radius: 3.5vw;
+}
+
 .container {
   align-items: center;
   display: flex;
@@ -172,4 +288,76 @@
 
 .typewriter span {
   color: rgb(119, 119, 119);
+}
+
+@media (max-width: 700px) {
+  .mainDiv {
+    flex-direction: column;
+  }
+
+  .mainDiv h1 {
+    font-weight: 300;
+    font-size: 3vw;
+    color: var(--text-blue);
+    text-align: left;
+  }
+
+  .titleDiv {
+    width: 100%;
+    padding: 1vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+  }
+
+  .greyDiv {
+    width: 100%;
+    border-top-left-radius: 3.5vw;
+    border-top-right-radius: 3.5vw;
+    border-bottom-left-radius: 0vw;
+    flex-direction: column;
+  }
+
+  .aboutDiv {
+    width: 100%;
+    padding: 4vw;
+  }
+
+  .aboutDiv h2 {
+    font-size: 8vw;
+  }
+
+  .aboutDiv span {
+    font-size: 4vw;
+  }
+
+  .aboutDiv p {
+    font-size: 2.25vw;
+  }
+
+  .imageDiv {
+    width: 100%;
+    height: 100vw;
+    border-radius: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-right: 2vw;
+  }
+
+  .overlay {
+    padding: 3vw;
+  }
+
+  .mainButton {
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    color: var(--text-blue);
+    padding: 2vw 1.75vw;
+    font-size: 3.75vw;
+    line-height: 1;
+    border-radius: 1.25vw;
+    cursor: pointer;
+  }
 }

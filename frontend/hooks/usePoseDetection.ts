@@ -134,7 +134,10 @@ export const usePoseDetection = () => {
         const shoulder = pose.keypoints.find(
           (kp) => kp.name === "left_shoulder" || kp.name === "right_shoulder"
         )
+
+        //TODO: add spine
         const spine = pose.keypoints.find((kp) => kp.name === "spine") // Update based on actual keypoint name
+
         const hip = pose.keypoints.find(
           (kp) => kp.name === "left_hip" || kp.name === "right_hip"
         )

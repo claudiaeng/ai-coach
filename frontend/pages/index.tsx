@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import styles from "@/styles/Home.module.css"
+import HomeImage from "@/components/Home/images/home.jpg"
+import Image from "next/image"
 
 const Home = () => {
   const [loaded, setLoaded] = useState(false)
@@ -10,7 +12,41 @@ const Home = () => {
 
   return (
     <>
-      <div className={`${styles.container} ${loaded ? styles.rise : ""}`}>
+      <div className={styles.mainDiv}>
+        <div className={styles.titleDiv}>
+          <h1>Form</h1>
+        </div>
+        <div className={styles.greyDiv}>
+          <div className={styles.aboutDiv}>
+            <div>
+              <h2>Your strongest and most balanced self.</h2>
+              <br />
+              <span>
+                Power your workouts with AI to finally solve asymmetries and
+                muscular imbalances [while getting stronger].
+              </span>
+              <br /> <br />
+            </div>
+
+            <p>
+              Say goodbye to injuries, undertraining, overtraining, feeling
+              weak, guesswork, wasted time, and wasted money.
+            </p>
+          </div>
+          <div className={styles.imageDiv}>
+            <div className={styles.overlay}>
+              <h2></h2>
+              <button className={styles.mainButton}>Get started</button>
+            </div>
+            <Image
+              src={HomeImage}
+              alt="Home Image"
+              className={styles.fullSizeImage}
+            />
+          </div>
+        </div>
+      </div>
+      {/* <div className={`${styles.container} ${loaded ? styles.rise : ""}`}>
         <div className={styles.text}>
           <h1 className={styles.typewriter}>Good morning, John</h1>
           <br />
@@ -101,7 +137,7 @@ const Home = () => {
             </div>
           </h1>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
