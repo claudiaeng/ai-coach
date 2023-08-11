@@ -14,10 +14,7 @@ const Onboarding: React.FC = () => {
             <div>
               <h2>Let&apos;s learn about your body</h2>
               <br />
-              <span>
-                Power your workouts with AI to finally solve asymmetries and
-                muscular imbalances [while getting stronger].
-              </span>
+              <span>Get started.</span>
               <br /> <br />
             </div>
 
