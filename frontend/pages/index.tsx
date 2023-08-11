@@ -4,6 +4,8 @@ import HomeImage from "@/components/home/images/home.jpg"
 import Image from "next/image"
 import { useRouter } from "next/router"
 
+//testing
+
 const Home = () => {
   const [loaded, setLoaded] = useState(false)
   const router = useRouter()
