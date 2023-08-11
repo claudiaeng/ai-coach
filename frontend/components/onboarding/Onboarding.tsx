@@ -12,7 +12,7 @@ const Onboarding: React.FC = () => {
         <div className={styles.greyDiv}>
           <div className={styles.aboutDiv}>
             <div>
-              <h2>Let's learn about your body</h2>
+              <h2>Let&apos;s learn about your body</h2>
               <br />
               <span>
                 Power your workouts with AI to finally solve asymmetries and
