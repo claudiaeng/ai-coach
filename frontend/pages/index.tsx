@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import styles from "@/components/Home/Home.module.css"
-import HomeImage from "@/components/Home/images/home.jpg"
+import styles from "@/components/home/Home.module.css"
+import HomeImage from "@/components/home/images/home.jpg"
 import Image from "next/image"
 import { useRouter } from "next/router"
 
