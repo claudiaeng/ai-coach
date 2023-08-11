@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, use } from "react"
-import { usePoseDetection } from "../hooks/usePoseDetection"
+import { usePoseDetection } from "../../hooks/usePoseDetection"
+import styles from "@/components/onboarding/Onboarding.module.css"
 
 const PoseDetector: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null)
@@ -83,24 +84,26 @@ const PoseDetector: React.FC = () => {
   }, [])
 
   return (
-    <>
-      <div style={{ position: "relative", width: "640px", height: "480px" }}>
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          style={{ position: "absolute", width: "640px", height: "480px" }}
-        />
-        <canvas
-          ref={canvasRef}
-          style={{
-            position: "absolute",
-            width: "640px",
-            height: "480px",
-            backgroundColor: "transparent",
-          }}
-        />
-      </div>
+    <div className={styles.poseDetectorDiv}>
+      <>
+        <div style={{ position: "relative", width: "640px", height: "480px" }}>
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            style={{ position: "absolute", width: "640px", height: "480px" }}
+          />
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: "absolute",
+              width: "640px",
+              height: "480px",
+              backgroundColor: "transparent",
+            }}
+          />
+        </div>
+      </>
       <div>
         <h3>Findings:</h3>
         {imbalances.map((finding, index) => (
@@ -110,7 +113,7 @@ const PoseDetector: React.FC = () => {
           <p key={index}>{finding}</p>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

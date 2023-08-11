@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react"
-import styles from "@/styles/Home.module.css"
+import styles from "@/components/Home/Home.module.css"
 import HomeImage from "@/components/Home/images/home.jpg"
 import Image from "next/image"
+import { useRouter } from "next/router"
 
 const Home = () => {
   const [loaded, setLoaded] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     setLoaded(true)
   }, [])
+
+  const handleClick = (path: string) => {
+    router.push(path)
+  }
 
   return (
     <>
@@ -36,7 +42,12 @@ const Home = () => {
           <div className={styles.imageDiv}>
             <div className={styles.overlay}>
               <h2></h2>
-              <button className={styles.mainButton}>Get started</button>
+              <button
+                className={styles.mainButton}
+                onClick={() => handleClick("/analyze")}
+              >
+                Get started
+              </button>
             </div>
             <Image
               src={HomeImage}

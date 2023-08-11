@@ -1,10 +1,7 @@
-import PoseDetector from "../components/PoseDetector"
+import Onboarding from "@/components/onboarding/Onboarding"
 
-const AnalyzePage = () => (
-  <div>
-    <h1>Analyze Imbalances and Posture</h1>
-    <PoseDetector />
-  </div>
-)
+const AnalyzePage = () => {
+  return <Onboarding />
+}
 
 export default AnalyzePage
